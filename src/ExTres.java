@@ -8,21 +8,25 @@ public class ExTres {
 
         List<Integer> notas = new ArrayList<>();
 
-        int numIdent, nota, soma = 0;
-        float medEx, medAp;
+        int numIdent;
+        int nota;
+        int soma = 0;
+        double medEx;
+        double medAp;
 
         System.out.println("Informe o número de identificação do aluno: ");
-        numIdent = teclado.nextInt(); // coletar numero de identificação
+        numIdent = teclado.nextInt(); // entrada de dados e coletar numero de identificação
 
 
         for (int i = 0; i < 3; i++) { //pra coletar as tres notas
             System.out.println("Informe a nota do aluno: ");
-            notas.add(nota = teclado.nextInt());  // pra atribuir a nota para a list
+            nota = teclado.nextInt();
+            notas.add(nota);  // adicionando uma nota a list
 
             soma += notas.get(i); //somar
 
         }
-        medEx = soma / 3; //media exercicios
+        medEx = soma / 3.0; //media exercicios
 
         medAp = notas.get(0) + notas.get(1) * 2 + notas.get(2) * 3 + medEx / 7; //med aproveitamento
 
@@ -37,6 +41,7 @@ public class ExTres {
         }
 
         System.out.println("Media Exercicios: " + medEx);
+
 
         System.out.print("Media de Aproveitamento: ");
         if (medAp >= 90) { //A

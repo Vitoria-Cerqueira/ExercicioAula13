@@ -2,14 +2,18 @@ import java.util.Scanner;
 //*Não consegui fazer*
 public class ExNove {
     public static void main(String[] args) {
-        Scanner teclado = new Scanner(System.in);
 
-        int num[] = new int[5];
+        int num[] = new int[50];
+        int valor = 101;
 
-        for (int i = 101; i <num.length; i++) {
-            num[i] = num[i]++;
-
+        for (int i = 0; i < num.length  ; i++) {
+            num[i] = valor; // o indice 0 está começando com 101 (na primeira rodada do for)
             System.out.println(num[i]);
-        }
+            valor++;
+            if (valor > 150){
+                break;
+            }
+
     }
+}
 }

@@ -8,7 +8,7 @@ public class ExSeis {
         int qtaNum;
         int soma = 0;
 
-        System.out.println("Digite a quantidade de idade que voce quer adicionar: ");
+        System.out.println("Digite a quantidade de numeros que voce quer adicionar: ");
         qtaNum = teclado.nextInt();
 
         List<Integer> numeros = new ArrayList<>();
@@ -25,10 +25,11 @@ public class ExSeis {
 
             }else {
                 System.out.println("Um numero negativo foi digitado! ");
-                break;
+                System.exit(0);
             }
 
         }
+        teclado.close();
         System.out.println("Resultado da soma é: " + soma);
 
 
